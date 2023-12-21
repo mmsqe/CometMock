@@ -2,7 +2,7 @@ install:
 	go install ./cometmock
 
 test-locally:
-	go test -timeout 600s -p 1 ./e2e-tests -test.v 
+	cd e2e-tests && go test -timeout 600s -p 1 ./ -test.v 
 
 test-docker:
 	# Build the Docker image
